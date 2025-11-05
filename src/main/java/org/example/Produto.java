@@ -1,10 +1,21 @@
 package org.example;
 
+import jakarta.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public abstract class Produto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
     private double preco;
     private int  quantidadeEstoque;
+
+    public Produto() {
+    }
 
     public abstract String getDescricao();
 
