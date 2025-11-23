@@ -10,10 +10,6 @@ public class ClienteController {
         this.clienteService = new ClienteService();
     }
 
-    /**
-     * 1. CRIAR
-     * Recebe dados simples do menu, cria o objeto e manda o serviço salvar.
-     */
     public void criarCliente(String nome, String cpf) {
         Cliente novoCliente = new Cliente();
         novoCliente.setNome(nome);

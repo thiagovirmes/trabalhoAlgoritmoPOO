@@ -27,10 +27,6 @@ public class ProdutoController {
 
 
     public void atualizarProduto(Produto produto) {
-        // O menu (Main) deve fazer:
-        // 1. buscarProduto(id)
-        // 2. Modificar o objeto (ex: produto.setNome("Novo Nome"))
-        // 3. Chamar este método: atualizarProduto(produto)
         produtoService.atualizar(produto);
     }
 

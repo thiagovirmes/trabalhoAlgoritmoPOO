@@ -38,7 +38,7 @@ public class Pedido {
     @Transient
     private MetodoPagamento metodoPagamento;
 
-    private LocalDate dataPedido; // Opcional, mas recomendado
+    private LocalDate dataPedido;
 
 
     public Pedido() {
@@ -49,7 +49,6 @@ public class Pedido {
 
 
     public void adicionarItem(ItemPedido item) {
-        // 3. Define a relação nos dois lados
         item.setPedido(this);
         this.itens.add(item);
         calcularTotal();
